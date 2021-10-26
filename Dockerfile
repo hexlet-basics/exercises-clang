@@ -1,6 +1,6 @@
 FROM hexletbasics/base-image:latest
 
-RUN apt-get update && apt-get install libcunit1 libcunit1-doc libcunit1-dev gcc tcc python3-pip
+RUN apt-get update && apt-get install -y libcunit1 libcunit1-doc libcunit1-dev gcc tcc python3-pip
 
 RUN pip install cpplint
 
