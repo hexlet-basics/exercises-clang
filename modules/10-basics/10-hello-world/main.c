@@ -2,8 +2,8 @@
 
 int main(void)
     {
-// BEGIN
+    // BEGIN
     printf("Hello, World!");
-// END
+    // END
     return 1;
 }
