@@ -1,15 +1,9 @@
 FROM hexletbasics/base-image:latest
 
-RUN apt-get update && apt-get install -y libcunit1 libcunit1-doc libcunit1-dev gcc tcc
-
-RUN pip install cpplint
-
-# ENV CPLUS_INCLUDE_PATH=/opt
+RUN apt-get update && apt-get install -y libcunit1 libcunit1-doc libcunit1-dev tcc
 
 WORKDIR /exercises-clang
 
 COPY . .
-
-# ENV PATH=~/.local/bin/:/exercises-cpp/bin:$PATH
 
 ENV PATH=/exercises-clang/bin:$PATH
