@@ -3,6 +3,10 @@ name: Switch вместо if/else
 theory: |
   Научимся использовать другой механизм проверки условий: switch.
 
+  <div class="ratio ratio-16x9">
+    <iframe src="//player.vimeo.com/video/128854220?api=1&player_id=video1" id="video1"></iframe>
+  </div>
+
 instructions: |
   Напишите функцию `number_printer()`, которая принимает в качестве параметра одно число от 0 до 3 и выводит на экран его эквивалент на английском языке.
 
