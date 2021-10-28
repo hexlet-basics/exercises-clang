@@ -5,5 +5,5 @@ int main(void)
     // BEGIN
     printf("Hello, World!");
     // END
-    return 1;
+    return 0;
 }
