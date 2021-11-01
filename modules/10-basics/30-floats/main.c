@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // BEGIN
-int main(void) {
+void km_to_mi(void) {
   float km, mi;
   float lower, upper, step;
 
@@ -16,7 +16,5 @@ int main(void) {
     printf("%.2f : %.2f\n", km, mi);
     km = km + step;
   }
-
-  return 0;
 }
 // END

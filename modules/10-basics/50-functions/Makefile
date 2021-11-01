@@ -1,2 +1,2 @@
 test:
-	@tcc -lcunit -run test.c
+	@tcc -run test.c | greenest

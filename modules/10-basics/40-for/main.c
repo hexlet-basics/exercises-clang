@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+void fahr_to_celcius(void)
 {
     float fahr;
 
@@ -8,6 +8,4 @@ int main(void)
         // BEGIN
         printf("%3.2f : %6.2f\n", fahr, (5.0/9.0)*(fahr-32));
         // END
-
-    return 0;
 }
