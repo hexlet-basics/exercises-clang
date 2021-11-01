@@ -2,13 +2,13 @@
 #include <unistd.h>
 #include "main.c"
 
-TEST test_base(int limit, char *expected) {
+TEST test_base(void) {
     int stdout_bk = dup(fileno(stdout));
     int pipefd[2];
     pipe(pipefd);
     dup2(pipefd[1], fileno(stdout));
 
-    fizzbuzz(limit);
+    fahr_to_celcius();
 
     fflush(stdout);
     close(pipefd[1]);
@@ -16,6 +16,24 @@ TEST test_base(int limit, char *expected) {
     int buf_size = 10240;
     char actual[buf_size];
     read(pipefd[0], actual, buf_size);
+
+    char* expected =
+        "0.00 : -17.78\n"
+        "20.00 :  -6.67\n"
+        "40.00 :   4.44\n"
+        "60.00 :  15.56\n"
+        "80.00 :  26.67\n"
+        "100.00 :  37.78\n"
+        "120.00 :  48.89\n"
+        "140.00 :  60.00\n"
+        "160.00 :  71.11\n"
+        "180.00 :  82.22\n"
+        "200.00 :  93.33\n"
+        "220.00 : 104.44\n"
+        "240.00 : 115.56\n"
+        "260.00 : 126.67\n"
+        "280.00 : 137.78\n"
+        "300.00 : 148.89\n";
 
     ASSERT_STR_EQ(expected, actual);
     memset(actual, 0, buf_size);
@@ -26,20 +44,6 @@ GREATEST_MAIN_DEFS();
 
 int main(int argc, char **argv) {
     GREATEST_MAIN_BEGIN();
-    RUN_TESTp(
-        test_base,
-        5,
-        "1 2 Fizz 4 Buzz"
-    );
-    RUN_TESTp(
-        test_base,
-        10,
-        "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz"
-    );
-    RUN_TESTp(
-        test_base,
-        20,
-        "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz"
-    );
+    RUN_TEST(test_base);
     GREATEST_MAIN_END();
 }

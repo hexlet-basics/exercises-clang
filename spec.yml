@@ -4,4 +4,4 @@ language:
   docker_image: "hexletbasics/exercises-clang"
   extension: c
   exercise_filename: main.c
-  exercise_test_filename: test.sh
+  exercise_test_filename: test.c
