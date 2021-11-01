@@ -1,2 +1,2 @@
 test:
-	@tcc -run test.c | greenest
+	@test.sh
