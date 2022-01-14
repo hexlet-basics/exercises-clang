@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-// BEGIN
 void kelvin_to_celcius(void)
 {
+  // BEGIN
   int celcius, kelvin;
   int lower, upper, step;
 
@@ -17,5 +17,5 @@ void kelvin_to_celcius(void)
     printf("%d : %d\n", celcius, kelvin);
     celcius = celcius + step;
   }
+  // END
 }
-// END
