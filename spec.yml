@@ -5,3 +5,6 @@ language:
   extension: c
   exercise_filename: main.c
   exercise_test_filename: test.c
+  learn_as: first_language
+  progress: completed
+  name: C
