@@ -13,7 +13,7 @@ TEST test_base(int number, char *expected) {
     fflush(stdout);
     close(pipefd[1]);
     dup2(stdout_bk, fileno(stdout));
-    int buf_size = 1024;
+    int buf_size = 10240;
     char actual[buf_size];
     read(pipefd[0], actual, buf_size);
 
