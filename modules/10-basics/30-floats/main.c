@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void km_to_mi(void)
-{
+void km_to_mi(void) {
   // BEGIN
   float km, mi;
   float lower, upper, step;

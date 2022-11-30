@@ -2,21 +2,19 @@
 #include <stdlib.h>
 
 // BEGIN
-void number_printer(int number)
-{
-  switch(number)
-  {
+void number_printer(int number) {
+  switch (number) {
     case 0:
-      printf ("Zero");
+      printf("Zero");
       break;
     case 1:
-      printf ("One");
+      printf("One");
       break;
     case 2:
-      printf ("Two");
+      printf("Two");
       break;
     case 3:
-      printf ("Three");
+      printf("Three");
       break;
     default:
       printf("%d", number);
