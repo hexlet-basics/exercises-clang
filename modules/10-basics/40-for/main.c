@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-void fahr_to_celcius(void)
-{
+void fahr_to_celcius(void) {
     float fahr;
 
     for (fahr = 0; fahr <= 300; fahr = fahr + 20)

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 // BEGIN
-void fizzbuzz(int limit)
-{
+void fizzbuzz(int limit) {
     int i;
 
-    for (i=1; i<=limit; ++i) {
+    for (i = 1; i <= limit; ++i) {
         if (i % 15 == 0)
             printf("FizzBuzz");
         else if (i % 3 == 0)

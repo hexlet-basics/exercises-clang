@@ -9,14 +9,16 @@ compose-build:
 	docker-compose build
 
 code-lint:
-	@echo code-lint
-	@# @(for i in $$(find . -type f -name main.cpp); do cpplint $$(dirname $$i) ; done)
+	@(for i in $$(find . -type f -name main.c); do cpplint --filter=-legal/copyright $$(dirname $$i)/main.c ; done)
 
 compose-bash:
 	docker-compose run exercises bash
 
 compose-test:
 	docker-compose run exercises make test
+
+compose-lint:
+	docker-compose run exercises make code-lint
 
 compose-description-lint:
 	docker-compose run exercises make description-lint
