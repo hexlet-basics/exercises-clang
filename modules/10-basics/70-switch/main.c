@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cstdio>
 
 // BEGIN
 void number_printer(int number) {

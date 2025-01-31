@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cstdio>
 
 void km_to_mi(void) {
   // BEGIN

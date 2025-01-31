@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <cstdio>
 
 void fahr_to_celcius(void) {
     float fahr;
