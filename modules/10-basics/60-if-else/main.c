@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <cstdio>
 
 // BEGIN
 void fizzbuzz(int limit) {
