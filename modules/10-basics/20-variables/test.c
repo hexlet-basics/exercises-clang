@@ -8,7 +8,7 @@ TEST test_base(void) {
     pipe(pipefd);
     dup2(pipefd[1], fileno(stdout));
 
-    kelvin_to_celcius();
+    celsius_to_kelvin();
 
     fflush(stdout);
     close(pipefd[1]);
