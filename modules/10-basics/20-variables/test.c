@@ -43,7 +43,9 @@ TEST test_base(void) {
 GREATEST_MAIN_DEFS();
 
 int main(int argc, char **argv) {
-    GREATEST_MAIN_BEGIN();
+    GREATEST_INIT();
+    greatest_parse_options(argc, argv);
     RUN_TEST(test_base);
-    GREATEST_MAIN_END();
+    GREATEST_PRINT_REPORT();
+    return (greatest_all_passed() ? EXIT_SUCCESS : EXIT_FAILURE);
 }

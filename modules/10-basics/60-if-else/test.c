@@ -25,7 +25,8 @@ TEST test_base(int limit, char *expected) {
 GREATEST_MAIN_DEFS();
 
 int main(int argc, char **argv) {
-    GREATEST_MAIN_BEGIN();
+    GREATEST_INIT();
+    greatest_parse_options(argc, argv);
     RUN_TESTp(
         test_base,
         5,
@@ -41,5 +42,6 @@ int main(int argc, char **argv) {
         20,
         "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz"
     );
-    GREATEST_MAIN_END();
+    GREATEST_PRINT_REPORT();
+    return (greatest_all_passed() ? EXIT_SUCCESS : EXIT_FAILURE);
 }

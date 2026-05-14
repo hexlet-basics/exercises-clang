@@ -25,12 +25,14 @@ TEST test_base(int number, char *expected) {
 GREATEST_MAIN_DEFS();
 
 int main(int argc, char **argv) {
-    GREATEST_MAIN_BEGIN();
+    GREATEST_INIT();
+    greatest_parse_options(argc, argv);
     RUN_TESTp(test_base, 0, "Zero");
     RUN_TESTp(test_base, 1, "One");
     RUN_TESTp(test_base, 2, "Two");
     RUN_TESTp(test_base, 3, "Three");
     RUN_TESTp(test_base, 4, "4");
     RUN_TESTp(test_base, 9, "9");
-    GREATEST_MAIN_END();
+    GREATEST_PRINT_REPORT();
+    return (greatest_all_passed() ? EXIT_SUCCESS : EXIT_FAILURE);
 }
