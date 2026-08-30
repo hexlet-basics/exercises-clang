@@ -1,4 +1,5 @@
 <div style="padding:62.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/128854220?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="7 SWITCH вместо IF/ELSE в Си"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 ## Switch
 
 В этом уроке разберем, как заменить длинную цепочку `if/else if/else` на `switch`.
